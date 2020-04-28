@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "ESNext",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "noEmit": true,
+        "jsx": "react",
+        "module": "ESNext",
+        "moduleResolution": "node",
+    },
+    "include": ["src/**/*"],
+}
