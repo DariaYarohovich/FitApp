@@ -14,7 +14,14 @@ module.exports = ({ mode } = { mode: production }) => {
         path: path.resolve(__dirname, "build"),
       },
       module: {
-        rules: [stylesProcessor(), babelProcessor(mode)],
+        rules: [
+          stylesProcessor(),
+          babelProcessor(mode),
+          {
+            test: /\.(jpg|jpeg|png)$/,
+            use: ["file-loader"],
+          },
+        ],
       },
       plugins: [
         new HtmlWebpackPlugin({
@@ -22,7 +29,10 @@ module.exports = ({ mode } = { mode: production }) => {
         }),
       ],
       resolve: {
-        extensions: [".tsx", ".ts", ".js", ".css"],
+        extensions: [".tsx", ".ts", ".js", ".css", ".jpeg", ".jpg"],
+        alias: {
+          mobx: __dirname + "/node_modules/mobx/lib/mobx.es6.js",
+        },
       },
     },
     configFile(mode)

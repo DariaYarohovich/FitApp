@@ -1,4 +1,8 @@
 .title {
-    color: salmon;
-    font-weight: 600
+  color: salmon;
+  font-weight: 600;
+}
+
+.image {
+  width: 100%;
 }

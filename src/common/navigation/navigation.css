@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+}
+
+.navItem {
+  display: block;
+  background-color: white;
+  padding: 10px 20px;
+  color: palevioletred;
+  text-decoration: none;
+}
+
+.navItemActive {
+  background-color: palevioletred;
+  color: white;
+}
