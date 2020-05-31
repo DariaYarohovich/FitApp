@@ -1,6 +1,8 @@
 const path = require("path");
 const webpackMerge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+
 const configFile = (mode) => require(`./configs/webpack.${mode}`);
 
 const stylesProcessor = require("./configs/presets/styles");
@@ -27,6 +29,7 @@ module.exports = ({ mode } = { mode: production }) => {
         new HtmlWebpackPlugin({
           template: "./src/index.html",
         }),
+        new webpack.WatchIgnorePlugin([/(\.css\.d\.ts)$/])
       ],
       resolve: {
         extensions: [".tsx", ".ts", ".js", ".css", ".jpeg", ".jpg"],

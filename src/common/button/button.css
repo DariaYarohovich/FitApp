@@ -1,0 +1,15 @@
+.button {
+  padding: 10px 20px;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: palevioletred;
+}

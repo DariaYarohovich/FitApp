@@ -7,8 +7,10 @@ module.exports = () => ({
       options: {
         importLoaders: 1,
         modules: true,
+        camelCase: true,
+        namedExport: true,
       },
     },
-    // "postcss-loader",
+    "postcss-loader",
   ],
 });
